@@ -1,7 +1,8 @@
 # new-xtticket
 
 > 这是基于 vue+webpack 的单页应用基础框架
-> src/page 目录下有示例页面可供体验
+
+src/page 目录下有示例页面可供体验
 
 ## Build Setup
 
