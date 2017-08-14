@@ -1,0 +1,151 @@
+@charset "UTF-8";
+#classify {
+  .search-box {
+    width: 16rem;
+    height: 1.5rem;
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAoAAAAA8CAMAAADBhPs2AAAAP1BMVEX///8AAAD////////////////////////////////////////////////////////////////////////////NY5A9AAAAFXRSTlNpAGMGUgI2W2BdC0U/LyAXDztHISRkxqHhAAABkklEQVR42u3dSW6DQBRF0V89PRiy/7VG6YSDsTIx9Qa5Zw1X2KVqvrkz8zjE1hvwEr6N/Ti7M48BpreV9HAB32/pzwBDpj5cpsnhGCD5oSafw/MAp9aAi5XpSYBpMKCCWzoLsIsGVBG7xwCXYkAlZTkGuDQGVNMsvwPsWH6gqtLdB5j4/4fKYroLkPUvqrvtAW4GVDf9BBhYgECgDd8BZgME8leAHfu/kPDhM8CbARL5I8DABxAiTXLm3gwQmZy51QCR3lniFxgyPtlsgMxsowEyo/UGyAzGORgIReMgIISKsQiGDvkBAAAAAP4V1sEQ8saLHBAqbMVBKXIYAUoDx7GgNHIgFUozR/Ih5BOXkiDUcy0TShMX0yHUJJ7mgFDmcSKI7I8T8QmESOaBSgi1gSd6ITTtj5SzIYzqBrcHGDgTg8piYFANdErHqC7oNAvDCqFTFsa1Qid2DKyGzi0xsh8S5yP7dyGzL4xL+RzcIUASRC3Nnt8e4EHaVhrEBfy6JXdk7sw8DrGQIV7Et7EfZ3fmHZuKCNYf9tn9AAAAAElFTkSuQmCC') no-repeat center;
+    margin: 0.3rem auto auto;
+    border-radius: 1rem;
+    input {
+      height: 1.5rem;
+      border: 0;
+      padding: 0 0.6rem;
+      background-color: transparent;
+      color: #fff;
+      font-size: 0.8rem;
+      width: 80%;
+      outline: none;
+    }
+    .icon-search {
+      font-size: 0.975rem;
+      color: #fff;
+      margin-left: 0.7rem;
+      width: 2rem;
+      height: 1.4rem;
+      display: inline-block;
+    }
+
+    /* 改placeholder的字体颜色 */
+
+    ::-webkit-input-placeholder {
+      color: #fff;
+    }
+
+    :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+      color: #fff;
+    }
+
+    ::-moz-placeholder { /* Mozilla Firefox 19+ */
+      color: #fff;
+    }
+
+    :-ms-input-placeholder { /* Internet Explorer 10+ */
+      color: #fff;
+    }
+  }
+
+  .classify-title {
+    width: 100%;
+    background-color: #ffffff;
+    height: 2rem;
+    text-align: center;
+    box-shadow: 0 0 15px #CBE5FF;
+    .line-active {
+      border-bottom: 2px solid #2fb2ff;
+      color: #2fb2ff;
+    }
+    ul {
+      width: 100%;
+      display: box; /* OLD - Android 4.4- */
+      display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+      display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+      display: -ms-flexbox; /* TWEENER - IE 10 */
+      display: -webkit-flex; /* NEW - Chrome */
+      display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    }
+    li {
+      flex: 1; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+      -webkit-flex: 1; /* Chrome */
+      -ms-flex: 1; /* IE 10 */
+      -webkit-box-flex: 1; /* OLD - iOS 6-, Safari 3.1-6 */
+      -moz-box-flex: 1; /* OLD - Firefox 19- */
+      text-align: center;
+      font-size: 0.8rem;
+      line-height: 2rem;
+    }
+  }
+
+  .classify-title
+  .classify-item {
+    width: 100%;
+    padding: 0 0.6rem;
+    li {
+      float: left;
+      width: 8.25rem;
+      height: 10rem;
+      background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXIAAAG4CAMAAABviZzpAAAAV1BMVEVQjMlQjMlQjMlQjMlQjMlQjMlQjMlQjMlQjMlQjMlQjMlQjMlQjMlQjMlQjMlQjMnv8vfy9/t2pNX8/f7r8Pbx9fnj6vTi6fO3zufF2O3C1+z////v8vfHNW5CAAAAG3RSTlMBBAkHDREXFBodDyEkKCYf+qIh3dvGoJtCRUM6H1v0AAAGk0lEQVR42uzW0XLCIBCF4dpWIUHDRMcL5f3fsxhWFmUoJNlML3r+R/jmzMIHQgih/9AOzQjUrf09/Q4JtMj7Cy1orvo79yea1Tt7sziw15Wot4Kn3t+ouYStDT2CZ9g9qsZajF4zfwUn6j2aFdG/oreIp9wKNZeyV8xZ/LnwnrUPqDF2759L/82cxBk8YmvUWIQndDaviBN41O5QY9Gd0BPzijiBk7a1BjVlLbkTetmcyaP403vSPqLGjO/BHtDJnMnL4moS995Be/CdULXBF9xtQFeqYM7kLK71bbw4tLjLeNOazQvk08jDVdHn0aGVjWc93ZY489LIg/jVodVdgznPPB85nRV/x7FxkUZ/z+m05DN/HfndIZHuPPMSOUa+ycyZPLsrNPIOfxWhLh3NnC5LceSdQ0J1PPMyuRe3DgllO10mT+6KcUgow5clI6dTrg4glyY/KDrmGTnflaNDQh3pslTIDcjlyE2JnF7PPci3Id/T+5mIg5zamHyXf1iUJ7dmcEiowVhP/ng/C+T0eoJcjjy8nxVyA3JJcgNygQTJeyI/OSTUich7kBcC+Q87dEwDAADAMMi/60nY3QQk0Kf8Ud6n/FHep/xR3qf8Ud6n/FHep/xR3qf8Ud6n/FHep/xR3qf8Ud6n/FHep/xR3qf8Ud6n/FHep/xR3qf8Ud6n/FHep/xR3qf8Ud6n/FHep3zs0DENAAAAwyD/ridhdxOQwKO8T/mjvE/5o7xP+aO8T/mjvE/5o7xP+aO8T/mjvE/5o7xP+aO8T/mjvE/5o7xP+aO8T/mjvE/5o7xP+aO8T/mjvE/5o7xP+aO8T/mjvE/5o7xP+aO8T/mjvE/5o7xP+aO8T/mjvE/5o7xP+aO8T/mjvE/5o7xP+aO8T/mjvE/5o7xP+aO8T/mjvE/5o7xP+aO8T/mjvE/5o7xP+aO8T/mjvE/52KFjGgAAAIZB/l1PQu8lIIGi/J/yovyf8qL8n/Ki/J/yovyf8qL8n/Ki/J/yovyf8qL8n/Ki/J/yovyf8qL8n/Ki/J/yovyf8qL8n/Ki/J/yovyf8qL8n/Ki/J/yovyf8qL8n/Ki/J/yovyf8qL8n/Ki/J/yovyf8qL8n/Ki/J/yovyf8qL8n/Ki/J/yovyf8qL8n/Ki/J/yovyf8qL8n/Ki/J/yovyf8qL8n/Ki/J/yovyf8qL8n/Ki/J/yovyf8qL8n/Ki/J/yovyf8qL8n/Ki/J/yovyf8qL8n/Ki/J/yovyf8qL8n/Ki/J/yovyf8qL8n/Ki/J/yovyf8qL8n/Ki/J/yovyf8qL8n/Ki/J/yovyf8qL8n/Ki/J/yovyf8qL8n/Ki/J/yovyf8qL8n/Ki/J/yovyf8qL8n/Ki/J/yovyf8qL8n/Ki/J/yovyf8qL8n/Ki/J/yonzs0DENACAABDEj+NeJhGdguaSV0D7li/I+5YvyPuWL8j7li/I+5YvyPuWL8j7li/I+5YvyPuWL8j7li/I+5YvyPuWL8j7li/I+5YvyPuWL8j7li/I+5YvyPuWL8j7li/I+5YvyPuWL8r7n8sMnyhflfcoX5X3KF+V9yhflfcoX5X3KF+V9t906Sm0YiIEwDG3cxnGbNcGx/bD3P2dlMSCXTSzjCMrS+Y/wIQaR3Ivk9UdyL5LXH8m9SF5/JPcief2R3Ivk9UdyL5LXH8m9SF5/JPcief155CeQXzML6gryE8kDCiRPJI8kTx65mKeO5HHkXRLxZ+Ri3mBZMgsKu9KIuJFrJHcKIgc3yPVLJHlw6x9xgzyRPI48FeTly7KceWZBLUeOh+UZefNJ8sgw5XhYCnJblsyCsl3ZIhfzPrOQehHfIF8ty5BZSMNqV0D+5MynzEKaiiMvyHHmM5clpH7GkRt5uSw48zGzgEYcOXalIF+f+e2e2cvdb7+O3MjtzLHmaj5yW16sH1UcS44jL88c0yLm53kaqH7ce5jms4jrrNiRl+Qrc0Fv29R1X9JV+mZuV2nx6rrUtgK+Egf5hrlsi6KrurizPam2eiu4rMqmOMjNXNFFXUqpY7tKqVVvBTdxI3945jAHuqhLLduZcn0AHOJ25JvmQBd1dWd+0FZvgHviSo5tAbqqL/DMDdhaswYXcZC75oIu6urOdtdoFwEvxB1zVQc72x+44e2LwxzoUEcX5mZabwYOccfc0AHPnApsAzdxH13U2eHeC3DPHOqEP4Rt3ibuops7259pl+C+OgsImGR/2N9zk/4wNWOMsX/QDyF2sVWe4ftOAAAAAElFTkSuQmCC') no-repeat center;
+      margin-top: 1.25rem;
+      background-size: 100% 100%;
+      text-align: center;
+
+      :nth-child(2n) {
+        float: right;
+      }
+
+      img {
+        width: 6.25rem;
+        height: 7.4rem;
+        margin: -0.32rem 0.6rem 0 0.6rem;
+        border-radius: 0.25rem;
+        box-shadow: 0 0 0.1rem rgba(80, 140, 201, 0.3);
+      }
+    }
+    a {
+      display: block;
+      color: #333333;
+    }
+    .product-name {
+      font-size: 0.7rem;
+      text-align: left;
+      padding: 0 1rem;
+      width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .price {
+      padding: 0.5rem 1rem;
+      span:first-child {
+        color: #ff565c;
+        font-size: 0.65rem;
+        float: left;
+      }
+      span:last-child {
+        float: right;
+        font-size: 0.5rem;
+      }
+      .icon-aixin {
+        color: #ff565c;
+        font-size: 0.6rem;
+        margin-right: 0.2rem;
+        vertical-align: middle;
+      }
+    }
+  }
+
+  .none-data {
+    width: 100%;
+    text-align: center;
+    img {
+      width: 7.4rem;
+      height: 6.875rem;
+      margin-top: 5.6rem;
+    }
+    p {
+      color: #949699;
+      font-size: 0.7rem;
+      text-align: center;
+      margin-top: 1rem;
+    }
+  }
+}

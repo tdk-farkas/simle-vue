@@ -1,0 +1,197 @@
+@charset "UTF-8";
+#refundList {
+  @import "../../res/style/config.less";
+
+  @headerHight: 2.2rem;
+
+  header {
+    height: @headerHight;
+    background: @bgColor;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+
+    h1 {
+      display: block;
+      font-size: 1rem;
+      text-align: center;
+      color: #fff;
+      line-height: @headerHight;
+      font-weight: normal;
+    }
+    .left {
+      position: absolute;
+      line-height: @headerHight;
+      color: #fff;
+      width: @headerHight;
+      padding-left: 0.6rem;
+      left: 0;
+    }
+    .right {
+      position: absolute;
+      top: 0;
+      right: 0;
+      color: #fff;
+      font-size: 0.75rem;
+      line-height: @headerHight;
+      padding: 0 0.6rem;
+    }
+    .icon-fanhui {
+      font-size: 1.1rem;
+    }
+  }
+
+  .collection-item {
+    width: 100%;
+  }
+
+  .collection-item li {
+    margin-bottom: 0.6rem;
+    /*padding: 0.6rem 0.6rem;*/
+    background-color: #ffffff;
+  }
+
+  .collection-item img {
+    width: 3.1rem;
+    height: 2.9rem;
+    border-radius: 27%;
+  }
+
+  li .title {
+    padding: 0 0.4rem;
+    height: 1.5rem;
+    overflow: hidden;
+    line-height: 1.5rem;
+  }
+
+  .title p {
+    float: left;
+    max-width: 80%;
+    font-size: 0.7rem;
+    color: #333;
+  }
+
+  .title span {
+    float: right;
+    font-size: 0.6rem;
+    color: #ff4b4b;
+  }
+
+  li .yuanyin {
+    padding: 0 0.4rem;
+    color: #ccc;
+    height: 1.3rem;
+    line-height: 1.2rem;
+    overflow: hidden;
+    font-size: 0.6rem;
+  }
+
+  .yuanyin span {
+    float: left;
+    height: 1.3rem;
+    overflow: hidden;
+    display: inline
+  }
+
+  .yuanyin p {
+    width: 80%;
+    float: left;
+    height: 1.3rem;
+    overflow: hidden;
+    display: inline
+  }
+
+  .yuanyin .price {
+    color: #ff565c;
+  }
+
+  .product-info {
+    width: 80%;
+    display: inline-block;
+  }
+
+  .product-info p {
+    font-size: 0.7rem;
+    width: 70%;
+    line-height: 1.4;
+  }
+
+  .product-price {
+    width: 100%;
+  }
+
+  .product-price span {
+    font-size: 0.85rem;
+    color: #ff565c;
+  }
+
+  .product-price small {
+    font-size: 0.55rem;
+    color: #4c4c4c;
+  }
+
+  .product-price button {
+    float: right;
+    font-size: 0.57rem;
+    color: #ff565c;
+    border: 1px solid #ff565c;
+    background-color: #ffffff;
+    border-radius: 1rem;
+    padding: 0.2rem 0.6rem;
+    outline: none;
+  }
+
+  .classify-title {
+    width: 100%;
+    background-color: #ffffff;
+    height: 2rem;
+    text-align: center;
+    margin-bottom: 0.6rem;
+    box-shadow: 0 0 15px #CBE5FF;
+  }
+
+  .classify-title .line-active {
+    border-bottom: 2px solid #2fb2ff;
+    color: #2fb2ff;
+  }
+
+  .classify-title ul {
+    width: 100%;
+    display: box; /* OLD - Android 4.4- */
+    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox; /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Chrome */
+    display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  }
+
+  .classify-title li {
+    flex: 1; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    -webkit-flex: 1; /* Chrome */
+    -ms-flex: 1; /* IE 10 */
+    -webkit-box-flex: 1; /* OLD - iOS 6-, Safari 3.1-6 */
+    -moz-box-flex: 1; /* OLD - Firefox 19- */
+    text-align: center;
+    font-size: 0.8rem;
+    line-height: 2rem;
+  }
+
+  .none-order {
+    width: 100%;
+    text-align: center;
+  }
+
+  .none-order img {
+    width: 7.4rem;
+    height: 6.875rem;
+    margin-top: 5.6rem;
+  }
+
+  .none-order p {
+    color: #949699;
+    font-size: 0.7rem;
+    text-align: center;
+    margin-top: 1rem;
+  }
+}

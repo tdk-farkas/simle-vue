@@ -1,0 +1,255 @@
+@charset "UTF-8";
+#login {
+
+  /* 登录 */
+  .top {
+    height: 9rem;
+    width: 100%;
+    background: linear-gradient(to bottom right, #5edfff, #0084ff);
+    padding-top: 0.7rem;
+    .register {
+      font-size: 0.75rem;
+      float: right;
+      margin-right: 1.05rem;
+      a {
+        color: #ffffff;
+      }
+    }
+  }
+
+  .logo {
+    width: 5.575rem;
+    height: 4.35rem;
+    margin: 0 auto;
+    img {
+      width: 5.575rem;
+      height: 4.35rem;
+      margin-top: 0.95rem;
+    }
+    span {
+      font-size: 1rem;
+      color: white;
+      margin-left: 0.65rem;
+
+    }
+  }
+
+  .zhanghao, .mima {
+    height: 2.5rem;
+    width: 100%;
+    border: none;
+    background: white;
+    font-size: 0.75rem;
+    color: #333333;
+    padding-left: 1.5rem;
+    line-height: 2.5rem;
+    input {
+      border: none;
+      color: #333333;
+      margin-left: 1.25rem;
+      outline: none;
+      max-width: 10rem;
+      height: 2.5rem;
+      position: absolute;
+    }
+  }
+
+  .mima {
+    .icon-yanjing {
+      color: #cccccc;
+      float: right;
+      padding: 0 1.05rem;
+    }
+
+    .icon-check {
+      color: #5aa5f2;
+    }
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+    input {
+      width: 14.5rem;
+      height: 2rem;
+      background: linear-gradient(to right, #0084ff, #5edfff);
+      border: none;
+      border-radius: 999rem;
+      margin-top: 2.5rem;
+      font-size: 1rem;
+      color: white;
+      outline: none;
+    }
+  }
+
+  .wenzi {
+    color: #5aa5f2;
+    font-size: 0.7rem;
+    margin-top: 0.75rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+
+  .wenzi1 {
+    float: left;
+    a {
+      color: #5aa5f2;
+    }
+  }
+
+  .wenzi2 {
+    float: right;
+    i {
+      vertical-align: middle;
+    }
+    .not-check {
+      color: #cccccc;
+    }
+  }
+
+  /* 注册 */
+
+  .register-box {
+    width: 100%;
+    background: #ffffff;
+    p {
+      border-bottom: 1px solid #eff2f7;
+      padding: 0 0.6rem;
+      height: 2.5rem;
+    }
+    span {
+      font-size: 0.7rem;
+      color: #333;
+      padding-left: 0.7rem;
+      padding-right: 1.5rem;
+      line-height: 2.5rem;
+    }
+    input {
+      -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+      border: 0;
+      height: 2.3rem;
+      width: 50%;
+      outline: 0;
+    }
+    .iconfont {
+      color: #cccccc;
+      margin-left: 1.25rem;
+    }
+    .icon-active {
+      color: #5aa5f2;
+    }
+  }
+
+  .btn-box {
+    width: 100%;
+    text-align: center;
+    margin-top: 2rem;
+    button {
+      width: 14.5rem;
+      height: 2rem;
+      border-radius: 30px;
+      border: 0;
+      background: linear-gradient(to left, #5edfff, #179aff);
+      font-size: 1rem;
+      color: #ffffff;
+    }
+  }
+
+  .reg-footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0.5rem;
+    background-color: transparent;
+    p {
+      font-size: 0.5rem;
+      color: #888888;
+      text-align: center;
+      line-height: 1.5;
+    }
+  }
+
+  .register-tel p:last-child input {
+    border-right: 1px solid #eff2f7;
+    width: 45%;
+  }
+
+  .register-tel .tips {
+    color: #52a0f1;
+    font-size: 0.6rem;
+    display: inline-block;
+    float: right;
+    line-height: 2.5rem;
+    font-style: normal;
+  }
+
+  .register-tel .not-click, .tips {
+    color: #cdcdcd;
+  }
+
+  /* 弹出层 */
+  .eject-out-box {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.7;
+    position: fixed;
+    top: 0;
+  }
+
+  .eject-inner-box {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+  }
+
+  .tips-box {
+    width: 14.5rem;
+    position: absolute;
+    left: 50%;
+    margin-left: -7.25rem;
+    top: 10rem;
+  }
+
+  .tips-inner {
+    width: 12.65rem;
+    border-top-left-radius: 0.3rem;
+    border-top-right-radius: 0.3rem;
+    margin: auto;
+    background-color: #ffffff;
+    text-align: center;
+    padding-top: 1.15rem;
+    .icon-gou {
+      font-size: 1.7rem;
+      color: #2fb2ff;
+    }
+    span {
+      display: block;
+      font-size: 0.6rem;
+      line-height: 1.4;
+      margin-top: 0.5rem;
+      padding-bottom: 1rem;
+    }
+  }
+
+  .tips-btn {
+    width: 100%;
+    button {
+      width: 100%;
+      height: 2rem;
+      border: 0;
+      background: linear-gradient(to left, #5edfff, #179aff);
+      border-radius: 1rem;
+      color: #ffffff;
+      font-size: 1rem;
+    }
+  }
+
+  /* 启动页 */
+  .start-page {
+    width: 100%;
+    height: 100%;
+    background: url("../../res/img/startPage.jpg") no-repeat center;
+    background-size: 100% 100%;
+  }
+}

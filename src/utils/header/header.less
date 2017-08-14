@@ -1,0 +1,41 @@
+@import "../../res/style/config.less";
+
+@headerHight: 2.2rem;
+
+#myHeader {
+  height: @headerHight;
+  background: @bgColor;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+
+  h1 {
+    display: block;
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    line-height: @headerHight;
+    font-weight: normal;
+  }
+  .left {
+    position: absolute;
+    line-height: @headerHight;
+    color: #fff;
+    width: @headerHight;
+    padding-left: 0.6rem;
+    left:0;
+  }
+  .right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #fff;
+    font-size: 0.75rem;
+    line-height: @headerHight;
+    padding: 0 0.6rem;
+  }
+  .icon-fanhui {
+    font-size: 1.1rem;
+  }
+}

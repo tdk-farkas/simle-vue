@@ -1,0 +1,69 @@
+@charset "UTF-8";
+
+@defaultTime: 0.3s;
+
+/* 可以设置不同的进入和离开动画 */
+/* 设置持续时间和动画函数 */
+.base(@ease:linear,@time:1) {
+  transition: all @defaultTime * @time @ease;
+}
+
+.fixed() {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.slide-base(@zIndex:1, @trans:0%) {
+  transform: translateX(@trans);
+  opacity: 0;
+  z-index: @zIndex;
+}
+
+.fade-base() {
+  opacity: 0;
+}
+
+.slide-in-enter {
+  .slide-base(20, 100%);
+}
+
+.slide-in-enter-active {
+  .base(ease, 1.5);
+  .fixed();
+}
+
+.slide-in-leave-active {
+  .base(ease, 1.5);
+  .slide-base(1, -100%);
+}
+
+.slide-out-enter {
+  .slide-base(1, -100%);
+}
+
+.slide-out-enter-active {
+  .base(ease, 1.5);
+}
+
+.slide-out-leave-active {
+  .base(ease, 1.5);
+  .slide-base(20, 100%);
+  .fixed();
+}
+
+.fade-enter {
+  .fade-base();
+}
+
+.fade-enter-active {
+  .base(linear, 2);
+  .fixed();
+}
+
+.fade-leave-active {
+  .base(linear, 2);
+  .fade-base();
+}

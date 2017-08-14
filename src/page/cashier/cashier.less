@@ -1,0 +1,308 @@
+@charset "UTF-8";
+#cashier {
+  @import "../../res/style/config.less";
+
+  @headerHight: 2.2rem;
+
+  header {
+    height: @headerHight;
+    background: @bgColor;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+
+    h1 {
+      display: block;
+      font-size: 1rem;
+      text-align: center;
+      color: #fff;
+      line-height: @headerHight;
+      font-weight: normal;
+    }
+    .left {
+      position: absolute;
+      line-height: @headerHight;
+      color: #fff;
+      width: @headerHight;
+      padding-left: 0.6rem;
+      left: 0;
+    }
+    .right {
+      position: absolute;
+      top: 0;
+      right: 0;
+      color: #fff;
+      font-size: 0.75rem;
+      line-height: @headerHight;
+      padding: 0 0.6rem;
+    }
+    .icon-fanhui {
+      font-size: 1.1rem;
+    }
+  }
+
+  footer {
+    width: 100%;
+    height: 2.45rem;
+    background-color: #ffffff;
+    position: fixed;
+    bottom: 0;
+
+    a {
+      display: block;
+      text-align: center;
+      padding-top: 0.4rem;
+      height: 2.45rem;
+    }
+
+    ul {
+      display: flex;
+    }
+
+    li {
+      flex: 1;
+      height: 2.45rem;
+      text-align: center;
+
+      span {
+        font-size: 0.5rem;
+        display: block;
+      }
+    }
+    i {
+      display: inline-block;
+      text-align: center;
+    }
+  }
+  .footer {
+    background: linear-gradient(to right, #0084ff, #5edfff);
+    a {
+      color: #ffffff;
+      font-size: 0.8rem;
+      line-height: 2;
+    }
+  }
+  .order-info-title {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 0.6rem;
+  }
+
+  .order-img {
+    float: left;
+    width: 17%;
+    text-align: right;
+  }
+
+  .order-img img {
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 50%;
+  }
+
+  .order-name {
+    float: left;
+    width: 83%;
+    padding: 0 0.4rem;
+  }
+
+  .order-name .price {
+    color: #ff565c;
+    font-size: 1rem;
+  }
+
+  .order-name p {
+    font-size: 0.7rem;
+    padding-top: 0.2rem;
+  }
+
+  .pay-method {
+    width: 100%;
+    background-color: #ffffff;
+    margin-top: 0.6rem;
+    padding: 0 0.6rem;
+  }
+
+  .pay-method li {
+    width: 100%;
+    border-bottom: 1px solid #eff2f7;
+    padding: 0.6rem 0;
+  }
+
+  .pay-method li:after {
+    content: "";
+    display: block;
+    visibility: hidden;
+    clear: both;
+  }
+
+  .pay-method .icon-box {
+    float: left;
+    width: 13%;
+    text-align: center;
+    padding-left: 0.5rem;
+  }
+
+  .zhifubao-icon {
+    width: 1.98rem;
+    height: 0.63rem;
+    background-image: url("../../res/img/zhifubao.png");
+    background-size: 100% 100%;
+    display: inline-block;
+  }
+
+  .weixin-icon {
+    width: 1.2rem;
+    height: 0.98rem;
+    background-image: url("../../res/img/weixin.png");
+    background-size: 100% 100%;
+    display: inline-block;
+  }
+
+  .pay-inner {
+    float: left;
+    padding-left: 1rem;
+  }
+
+  .pay-inner span {
+    font-size: 0.8rem;
+    display: block;
+  }
+
+  .pay-inner label {
+    font-size: 0.5rem;
+    color: #999999;
+    margin-top: 0.1rem;
+    display: inherit;
+  }
+
+  .pay-method .icon-gou {
+    float: right;
+    color: #cccccc;
+    font-size: 1.1rem;
+    margin-top: 0.3rem;
+  }
+
+  .pay-method .icon-check {
+    color: #3fc1ff;
+  }
+
+  .icon-box .icon-erweima {
+    color: #288bba;
+    font-size: 1.15rem;
+  }
+
+  /* 二维码弹出层 */
+  .eject-out-box {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.4;
+    position: fixed;
+    top: 0;
+  }
+
+  .eject-inner-box {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+  }
+
+  .erweima-box {
+    width: 15rem;
+    height: 19rem;
+    background-color: #ffffff;
+    position: absolute;
+    left: 50%;
+    margin-left: -7.5rem;
+    top: 6.25rem;
+    padding: 1.75rem 1.33rem;
+
+  }
+
+  .erweima-box .price {
+    color: #ff565c;
+    font-size: 1rem;
+  }
+
+  .erweima-box .pro-name {
+    font-size: 0.7rem;
+    padding-top: 0.2rem;
+  }
+
+  .erweima-img {
+    text-align: center;
+    padding: 1rem 0 0.6rem;
+  }
+
+  .erweima-img img {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  .erweima-tips {
+    color: #999999;
+    font-size: 0.7rem;
+    text-align: center;
+  }
+
+  /**
+  微信支付二维码
+  **/
+  .orderDetail-pay-icon-parent {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(50, 50, 50, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+  }
+
+  .orderDetail-pay-icon-card {
+    width: 320px;
+    height: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -200px;
+    margin-left: -160px;
+    border-radius: 4px;
+    background-color: #fff;
+    box-shadow: 0 0 14px rgba(0, 0, 0, 0.1);
+  }
+
+  .orderDetail-pay-icon-div {
+    width: 220px;
+    height: 220px;
+    margin: 50px;
+    background: url('../../res/img/erweima.png') no-repeat;
+    background-size: 220px 220px;
+    position: absolute;
+  }
+
+  .orderDetail-pay-icon-div img {
+    width: 216px;
+    height: 216px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    margin-top: -108px;
+    margin-left: -108px;
+  }
+
+  .orderDetail-pay-txt-div {
+    width: 260px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    border-top: 1px #cdcdcd solid;
+    margin: 0 30px;
+    color: #666666;
+    font-size: 18px;
+    position: absolute;
+    bottom: 0;
+  }
+}
