@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="7f78210f-2308-4689-a7be-45ac347bd220" name="local" url="http://192.168.1.88:9990">
+        <fileTransfer port="0" mountedRoot="D:\github\new-xtticket\dist" accessType="MOUNT" />
+      </webServer>
+    </option>
+  </component>
+</project>
